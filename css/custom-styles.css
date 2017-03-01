@@ -107,3 +107,286 @@ section {
 /**********************************************************************************************************************
 ********** header
 ***********************************************************************************************************************/
+header[role='banner'] {
+  background: url(../images/background-1.jpg) no-repeat center top;
+  padding: 0 0 85px 0;
+}
+header[role='banner'] .header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 35px 0;
+}
+header[role='banner'] .logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 184px;
+  position: relative;
+}
+header[role='banner'] .logo:after {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 0;
+  right: -20px;
+  -webkit-transform: rotate(-40deg);
+  -moz-transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
+  -o-transform: rotate(-40deg);
+  transform: rotate(-40deg);
+}
+header[role='banner'] h1 {
+  display: inline-block;
+  vertical-align: top;
+  margin: 7px 0 0 25px;
+}
+header[role='banner'] h1 span {
+  display: block;
+  color: #fff;
+  font-size: .95em;
+  font-weight: 100;
+}
+header[role='banner'] h1 span:nth-of-type(2) {
+  padding-left: 20px;
+}
+header[role='banner'] h1 span:nth-of-type(3) {
+  padding-left: 40px;
+}
+header[role='banner'] .header-phone {
+  color: #fff;
+  font-size: .95em;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1;
+  margin: 10px 0 0 0;
+}
+header[role='banner'] .header-phone a {
+  display: block;
+  color: inherit;
+  font-style: italic;
+  font-size: 1.2em;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+header[role='banner'] .header-hours {
+  margin: 7px 0 0 0;
+}
+header[role='banner'] .header-hours span {
+  display: block;
+  color: #fff;
+  font-size: .95em;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.2;
+}
+header[role='banner'] .sign-block button {
+  display: block;
+  float: left;
+  height: 35px;
+  line-height: 1;
+  padding: 0 25px;
+  font-size: 0.8235294117647059em;
+  color: #ffffff;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+header[role='banner'] .sign-block button.sign-in {
+  background: #522374;
+}
+header[role='banner'] .sign-block button.sign-in:hover {
+  background: #ffffff;
+  color: #522374;
+}
+header[role='banner'] .sign-block button.sign-up {
+  background: #f8a94e;
+  margin-left: 25px;
+}
+header[role='banner'] .sign-block button.sign-up:hover {
+  background: #ffffff;
+  color: #f8a94e;
+}
+header[role='banner'] .sign-block button:active {
+  padding-top: 5px;
+}
+header[role='banner'] .burger {
+  display: none;
+}
+nav ul {
+  display: flex;
+  width: 100%;
+  height: 55px;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(to right, #371451, #84206b);
+  list-style: none;
+  padding: 0 20px;
+}
+nav ul li a {
+  display: block;
+  font-weight: 500;
+  color: #fff;
+}
+nav ul li a:hover {
+  color: #f8a94e;
+}
+nav ul li a:active {
+  padding-top: 3px;
+}
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** footer
+***********************************************************************************************************************/
+footer[role='contentinfo'] {
+  background: #171229;
+}
+footer[role='contentinfo'] .wrapper-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 0;
+}
+footer[role='contentinfo'] .wrapper-inner:after {
+  display: none;
+}
+footer[role='contentinfo'] .footer-info {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+}
+footer[role='contentinfo'] .footer-info:first-of-type span:first-of-type {
+  margin: 0 0 15px 0;
+}
+footer[role='contentinfo'] .footer-info:last-of-type span {
+  margin: 0 0 10px 0;
+}
+footer[role='contentinfo'] .footer-info span {
+  display: block;
+  color: #695774;
+  font-size: .95em;
+}
+footer[role='contentinfo'] .footer-info span a {
+  color: inherit;
+  font-size: inherit;
+}
+footer[role='contentinfo'] .footer-info span a:hover {
+  color: #f8a94e;
+}
+footer[role='contentinfo'] .footer-info > a {
+  display: block;
+  font-size: .95em;
+  text-decoration: underline;
+  color: #f8a94e;
+}
+footer[role='contentinfo'] .footer-info > a.phone {
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+footer[role='contentinfo'] .footer-info > a.phone:hover {
+  text-decoration: underline;
+}
+footer[role='contentinfo'] .footer-info > a:hover {
+  text-decoration: none;
+}
+footer[role='contentinfo'] .social-links {
+  margin: 40px 0 0 0;
+}
+footer[role='contentinfo'] .social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+footer[role='contentinfo'] .social-links li a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  color: #ffffff;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  text-align: center;
+}
+footer[role='contentinfo'] .social-links li a i {
+  color: inherit;
+  font-size: 28px;
+  line-height: 50px;
+}
+footer[role='contentinfo'] .social-links li a:active {
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+}
+footer[role='contentinfo'] .social-links li:nth-child(1) a {
+  background: #6c97b9;
+}
+footer[role='contentinfo'] .social-links li:nth-child(2) a {
+  background: #3969a5;
+}
+footer[role='contentinfo'] .social-links li:nth-child(3) a {
+  background: #3c608d;
+}
+footer[role='contentinfo'] .social-links li:nth-child(4) a {
+  background: #d53737;
+}
+footer[role='contentinfo'] .social-links li:nth-child(5) a {
+  background: #1ab6f2;
+}
+footer[role='contentinfo'] .social-links li:nth-child(6) a {
+  background: #ff7c20;
+}
+footer[role='contentinfo'] .social-links li:nth-child(1) a:hover {
+  background: #ffffff;
+  color: #6c97b9;
+}
+footer[role='contentinfo'] .social-links li:nth-child(2) a:hover {
+  background: #ffffff;
+  color: #3969a5;
+}
+footer[role='contentinfo'] .social-links li:nth-child(3) a:hover {
+  background: #ffffff;
+  color: #3c608d;
+}
+footer[role='contentinfo'] .social-links li:nth-child(4) a:hover {
+  background: #ffffff;
+  color: #d53737;
+}
+footer[role='contentinfo'] .social-links li:nth-child(5) a:hover {
+  background: #ffffff;
+  color: #1ab6f2;
+}
+footer[role='contentinfo'] .social-links li:nth-child(6) a:hover {
+  background: #ffffff;
+  color: #ff7c20;
+}
+footer[role='contentinfo'] .social-links li:last-child {
+  margin-right: 0;
+}
