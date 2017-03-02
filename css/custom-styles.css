@@ -270,7 +270,7 @@ nav ul li a:active {
     display: block;
     position: fixed;
     z-index: 1000;
-    top: -100%;
+    top: -100vh;
     left: 0;
     right: 0;
     height: 100vh;
@@ -902,7 +902,7 @@ main ul li:before {
 }
 main img {
   display: block;
-  width: auto;
+  width: 100%;
   max-width: 370px;
   float: right;
   margin: 0 0 30px 30px;
@@ -925,6 +925,10 @@ main p {
   }
   main h4 {
     font-size: 1.5em;
+  }
+  main img {
+    float: none;
+    margin: 20px 0;
   }
 }
 @media (max-width: 480px) {
