@@ -977,14 +977,30 @@ main {
 
   }
 
-  .note {
+  .message {
     display: block;
     width: 100%;
     padding: 15px 40px;
-    background: #e6b47f;
     color: #fff;
     font-weight: 700;
     margin: 25px 0;
+
+    &.message-note {
+      background: #e6b47f;
+    }
+
+    &.message-error {
+      background: #d54a4a;
+    }
+
+    &.message-info {
+      background: #aabbf3;
+    }
+
+    &.message-success {
+      background: #9bbd6a;
+    }
+
   }
 
   h1,

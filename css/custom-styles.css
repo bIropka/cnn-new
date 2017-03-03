@@ -833,14 +833,25 @@ main .wrapper-inner {
     padding: 0 10px 50px;
   }
 }
-main .note {
+main .message {
   display: block;
   width: 100%;
   padding: 15px 40px;
-  background: #e6b47f;
   color: #fff;
   font-weight: 700;
   margin: 25px 0;
+}
+main .message.message-note {
+  background: #e6b47f;
+}
+main .message.message-error {
+  background: #d54a4a;
+}
+main .message.message-info {
+  background: #aabbf3;
+}
+main .message.message-success {
+  background: #9bbd6a;
 }
 main h1,
 main h2,
