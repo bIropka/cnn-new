@@ -604,9 +604,9 @@ section {
 
 }
 
-  /**********************************************************************************************************************
-  ********** about-china
-  ***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** about-china
+***********************************************************************************************************************/
 
 .about-china {
   background: url(../images/background-2.jpg) no-repeat center top;
@@ -970,11 +970,6 @@ main {
 
   .wrapper-inner {
     padding: 0 15px 50px;
-
-    @media (max-width: 768px) {
-      padding: 0 10px 50px;
-    }
-
   }
 
   .message {
@@ -1152,3 +1147,590 @@ main {
   }
 
 }
+
+/**********************************************************************************************************************
+********** universities
+***********************************************************************************************************************/
+
+.universities-page {
+  background: #f8f8fd;
+
+  h1 {
+    text-transform: uppercase;
+    margin: 60px 0 40px;
+
+    @media(max-width: 480px) {
+      font-size: 30px;
+      margin: 40px 0 30px;
+    }
+
+  }
+
+}
+
+.form-chooser {
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .custom-select {
+    display: block;
+    width: 31.5%;
+    height: 56px;
+    margin: 2.75% 2.75% 2.75% 0;
+    float: left;
+    position: relative;
+    padding: 0 55px 0 0;
+    border: 1px solid #e9e9ef;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 10px solid #8a8a94;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      right: 18px;
+    }
+
+    &.active:after {
+      border-bottom: 10px solid #8a8a94;
+      border-top: none;
+    }
+
+    &:nth-of-type(3n) {
+      margin: 2.75% 0 2.75% 0;
+    }
+
+    @media(max-width: 980px) {
+      width: 48%;
+      margin: 25px 4% 25px 0;
+
+      &:nth-of-type(3n) {
+        margin: 25px 4% 25px 0;
+      }
+
+      &:nth-of-type(2n) {
+        margin: 25px 0 25px 0;
+      }
+
+    }
+
+    @media(max-width: 768px) {
+      float: none;
+      width: 100%;
+      margin: 50px 0 0;
+
+      &:nth-of-type(2n),
+      &:nth-of-type(3n) {
+        float: none;
+        width: 100%;
+        margin: 50px 0 0;
+      }
+
+    }
+
+    .select-label {
+      font-size: 17px;
+      color: #493e52;
+      font-weight: 700;
+      margin-bottom: 10px;
+      position: absolute;
+      left: 0;
+      top: -35px;
+
+      @media(max-width: 768px) {
+        top: -30px;
+      }
+
+    }
+
+    .current-value {
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: 54px;
+      font-weight: 300;
+      color: #493e52;
+      background: #fff;
+      padding: 0 25px;
+
+    }
+
+    ul {
+      display: none;
+      width: ~"calc(100% + 2px)";
+      position: absolute;
+      left: -1px;
+      top: 100%;
+      background: #fff;
+      border: 1px solid #e9e9ef;
+      border-top: none;
+      z-index: 1;
+    }
+
+    &.active ul {
+      display: block;
+    }
+
+    li {
+      font-weight: 300;
+      color: #493e52;
+      padding: 0 25px;
+
+      &:before {
+        display: none;
+      }
+
+      &:hover {
+        color: @color-yellow;
+      }
+
+    }
+
+    input {
+      display: none;
+    }
+
+  }
+
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  input[type='checkbox'] + label {
+    display: block;
+    width: 31.5%;
+    height: 56px;
+    line-height: 60px;
+    margin: 2.75% 2.75% 2.75% 0;
+    float: left;
+    font-weight: 700;
+    font-size: 17px;
+    color: #493e52;
+    cursor: pointer;
+
+    @media(max-width: 980px) {
+      width: 48%;
+      margin: 25px 4% 25px 0;
+    }
+
+    @media(max-width: 768px) {
+      float: none;
+      width: 100%;
+      text-align: center;
+      margin: 15px 25px 15px 0;
+    }
+
+  }
+
+  input[type='checkbox'] + label:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #e9e9ef;
+    background: #fff;
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  input[type='checkbox']:checked + label:before {
+    content: 'X';
+    line-height: 32px;
+  }
+
+  button[type='submit'] {
+    display: block;
+    width: 185px;
+    height: 56px;
+    line-height: 54px;
+    margin: 2.75% 0;
+    float: left;
+    font-weight: 700;
+    font-size: 18px;
+    color: #f8a94e;
+    border: 1px solid #f8a94e;
+    border-radius: 30px;
+    background: #fff;
+    cursor: pointer;
+
+    @media(max-width: 980px) {
+      margin: 25px 0;
+    }
+
+    @media(max-width: 768px) {
+      margin: 15px auto;
+      float: none;
+    }
+
+  }
+
+  button[type='submit']:hover {
+    background: #f8a94e;
+    color: #fff;
+  }
+
+  button[type='submit']:active {
+    line-height: 62px;
+  }
+
+}
+
+.university-card {
+  display: block;
+  width: 100%;
+  margin-top: 40px;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  @media(max-width: 1170px) {
+    background: #fff;
+  }
+
+  @media(max-width: 480px) {
+    border: 1px solid #efedf3;
+    border-top: none;
+  }
+
+}
+
+.university-image {
+  width: 370px;
+  height: 230px;
+  float: left;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .2);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  h3 {
+    display: block;
+    width: 100%;
+    padding: 10px 30px;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #fff;
+    font-style: normal;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+  }
+
+  .city {
+    display: inline-block;
+    height: 36px;
+    position: absolute;
+    left: 30px;
+    bottom: 25px;
+    z-index: 1;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    span {
+      display: block;
+      float: left;
+      color: #fff;
+      font-size: 16px;
+      line-height: 36px;
+    }
+
+    span:first-of-type {
+      padding: 0 0 0 15px;
+      background: #db8727;
+      font-weight: 100;
+      position: relative;
+      z-index: 1;
+    }
+
+    span:first-of-type:before {
+      content: '';
+      display: block;
+      height: 50px;
+      width: 25px;
+      background: #db8727;
+      position: absolute;
+      left: 90%;
+      top: -7px;
+      transform: rotate(20deg);
+      z-index: -1;
+    }
+
+    span:last-of-type {
+      padding: 0 15px 0 30px;
+      background: #f8a94e;
+      font-weight: 700;
+    }
+
+  }
+
+  @media(max-width: 1170px) {
+    float: none;
+  }
+
+  @media(max-width: 400px) {
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+    }
+
+    h3 {
+      padding: 10px 20px;
+    }
+
+    .city {
+      left: 20px;
+    }
+
+  }
+
+}
+
+.university-specialities {
+  display: block;
+  width: ~"calc(100% - 370px)";
+  min-height: 230px;
+  background: #fff;
+  float: left;
+  padding: 20px 30px 55px 30px;
+  position: relative;
+
+  .title {
+    color: #493e52;
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 30px;
+
+    @media(max-width: 480px) {
+      padding: 0 15px;
+    }
+
+  }
+
+  .see-all {
+    display: block;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    color: #8f8498;
+    text-transform: uppercase;
+    border-top: 1px solid #efedf3;
+    border-bottom: 1px solid #efedf3;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    &:hover {
+      background: #efedf3;
+    }
+
+    span {
+      font-size: inherit;
+      color: inherit;
+      line-height: 40px;
+    }
+
+    i {
+      font-size: 24px;
+      color: inherit;
+      position: relative;
+      top: 3px;
+      margin-left: 15px;
+    }
+
+    .all, .fa-angle-up {
+      display: none;
+    }
+
+    &.active {
+
+      .all, .fa-angle-up {
+        display: inline-block;
+      }
+
+      .some, .fa-angle-down {
+        display: none;
+      }
+
+    }
+
+  }
+
+  @media(max-width: 1170px) {
+    width: 100%;
+    float: none;
+    padding: 20px 15px 55px 15px;
+  }
+
+  @media(max-width: 480px) {
+    padding: 20px 0 55px 0;
+  }
+
+}
+
+.speciality {
+  display: block;
+  margin: 15px 0;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  > div {
+    display: block;
+    float: left;
+    text-align: center;
+  }
+
+  .speciality-name {
+    width: 55%;
+    text-align: left;
+    padding-left: 40px;
+    position: relative;
+    font-size: 17px;
+    font-weight: 700;
+    color: #493e52;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 11px;
+      background: url(../images/decor-speciality.png) no-repeat;
+      position: absolute;
+      margin: auto;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+    }
+
+  }
+
+  .speciality-duration {
+    width: 10%;
+    font-size: 17px;
+    color: #493e52;
+  }
+
+  .speciality-cost {
+    width: 17.5%;
+    font-size: 17px;
+    color: #493e52;
+  }
+
+  .speciality-cost-rouble {
+    width: 17.5%;
+    color: #a59eab;
+  }
+
+  @media(max-width: 1170px) {
+
+    .speciality-name {
+      padding-left: 20px;
+
+      &:before {
+        left: 0;
+      }
+
+    }
+
+  }
+
+  @media(max-width: 768px) {
+
+    .speciality-name {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    > div {
+      text-align: left;
+    }
+
+    .speciality-duration {
+      width: 20%;
+      padding-left: 20px;
+    }
+
+    .speciality-cost {
+      width: 40%;
+    }
+
+    .speciality-cost-rouble {
+      width: 40%;
+    }
+
+  }
+
+  @media(max-width: 480px) {
+    padding: 0 15px;
+
+    &:first-of-type {
+      border-bottom: 1px solid #efedf3;
+    }
+
+    .speciality-name,
+    .speciality-duration,
+    .speciality-cost,
+    .speciality-cost-rouble {
+      width: 100%;
+      float: none;
+      padding-left: 20px;
+      margin: 10px 0;
+    }
+
+  }
+
+}
+
