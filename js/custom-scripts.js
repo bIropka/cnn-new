@@ -66,9 +66,33 @@ $(document).ready(function() {
 
     });
 
+    var arraySpec = $('.speciality');
+    for(var i = 0; i < arraySpec.length; i++) {
+        if($(arraySpec[i]).index() > 3) {
+            $(arraySpec[i]).fadeOut(0);
+        }
+    }
+
     $('.university-specialities .see-all').click(function() {
-        $(this).toggleClass('active');
-        $(this).siblings('.hidden').fadeToggle(300);
+
+        var currentArraySpec = $(this).siblings('.speciality');
+
+        if($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            for(var j = 0; j < currentArraySpec.length; j++) {
+                if($(currentArraySpec[j]).index() > 3) {
+                    $(currentArraySpec[j]).fadeOut(300);
+                }
+            }
+        } else {
+            $(this).addClass('active');
+            for(var k = 0; k < currentArraySpec.length; k++) {
+                if($(currentArraySpec[k]).index() > 3) {
+                    $(currentArraySpec[k]).fadeIn(300);
+                }
+            }
+        }
+
     });
 
     if($(window).width() < 481) {
