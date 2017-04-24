@@ -505,6 +505,25 @@ section blockquote {
     max-width: 600px!important;
   }
 }
+.btn-round {
+  display: block;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 25px 70px;
+  background: #f8a94e;
+  -webkit-border-radius: 25%;
+  -moz-border-radius: 25%;
+  border-radius: 45px;
+  margin: 0 auto;
+  max-width: 370px;
+  border: 2px solid #f8a94e;
+}
+.btn-round:hover {
+  background: #ffffff;
+  color: #f8a94e;
+}
 .right-side .image-wrap {
   float: left;
 }
@@ -1659,12 +1678,37 @@ main p {
 /***********************************************************************************************************************
 ******** why-ccn-top
 ***********************************************************************************************************************/
-.why-ccn-page h1,
 .why-ccn-page h4 {
   text-transform: uppercase;
+  margin: 30px 0;
+}
+.why-ccn-page h2 {
+  margin: 20px 0 40px;
+}
+.why-ccn-page h3 {
+  display: block;
+  width: 100%;
+  margin: 70px 0 50px;
 }
 .why-ccn-page {
   background: #f8f8fd;
+}
+.why-ccn-page img {
+  float: none;
+  margin: 0;
+  width: 100%;
+  max-width: none;
+}
+.why-ccn-page ul {
+  max-width: none;
+}
+.why-ccn-page ul li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.why-ccn-page ul li:before {
+  display: none;
 }
 .why-ccn-page .why-we-list {
   float: left;
@@ -1673,6 +1717,7 @@ main p {
   background: url(../images/why-ccn-background.png) no-repeat center top;
 }
 .why-ccn-top h1 {
+  text-transform: uppercase;
   margin: 30px 0;
 }
 .why-ccn-info {
@@ -1706,7 +1751,7 @@ main p {
   padding: 40px 45px;
   float: right;
 }
-.ccn-news-inner {
+.ccn-news .ccn-news-inner {
   width: 100%;
   max-height: 100%;
   overflow: hidden;
@@ -1787,6 +1832,11 @@ main p {
   position: relative;
 }
 .why-we-list a:after {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
   content: '';
   display: block;
   position: absolute;
@@ -1821,4 +1871,220 @@ main p {
   height: 8px;
   background: url(../images/image-arrow.png) no-repeat;
   margin: 10px 0 0 0;
+}
+.why-we-list a:hover:after {
+  opacity: 0;
+}
+.universities-level h3 {
+  margin: 20px 0;
+}
+.custom-table {
+  display: table;
+  width: 100%;
+}
+.custom-table .custom-table-row {
+  display: table-row;
+  background: #fff;
+}
+.custom-table .custom-table-row .custom-table-heading {
+  display: table-cell;
+  width: 33.3333%;
+  color: #e3dff3;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 30px 100px 30px 50px;
+}
+.custom-table .custom-table-row .custom-table-cell {
+  display: table-cell;
+  width: 33.3333%;
+  padding: 20px 40px 15px 50px;
+  color: #313131;
+  font-size: 17px;
+  font-weight: 300;
+}
+.custom-table .custom-table-row .custom-table-cell:first-of-type {
+  color: #313131;
+  text-align: right;
+  font-size: 17px;
+  font-weight: 500;
+}
+.custom-table .custom-table-row:nth-of-type(2n + 1) {
+  background: #ebf0f3;
+}
+.custom-table .custom-table-row:first-of-type {
+  background: #857caf;
+}
+.university-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: #fff;
+  margin: 3px 0;
+  padding: 25px;
+}
+.university-item span {
+  display: block;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 3px 0;
+  color: #662c90;
+}
+.university-item span:last-of-type {
+  margin: 3px 0 15px 0;
+}
+.university-item .fa {
+  font-size: 20px;
+  color: #f8a94e;
+  margin: 0 10px 0 0;
+}
+.university-item ul {
+  margin: 10px 0;
+}
+.university-item ul li {
+  display: block;
+  margin: 5px 0;
+  padding: 0;
+}
+.university-item ul li:before {
+  display: none;
+}
+.university-item .university-item-image {
+  width: 133px;
+}
+.university-item .university-item-image img {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+.university-item .university-item-main span:nth-of-type(2) {
+  color: #f8a94e;
+}
+.university-item .university-item-main span:nth-of-type(3) {
+  color: #313131;
+  font-weight: 300;
+}
+.why-ccn-universities .btn-round {
+  margin: 65px auto 0;
+}
+.text-block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.text-block .text-block-image {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.text-block .text-block-image img {
+  display: block;
+  margin: 0;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+.text-block .text-block-info {
+  width: 50%;
+  background: #fff;
+  padding: 40px 90px 40px 50px;
+  color: #363636;
+  font-size: 17px;
+  line-height: 27px;
+  font-weight: 300;
+}
+.text-block .text-block-info span {
+  font-weight: 500;
+}
+.text-block .btn-round {
+  text-align: center;
+  background: #e81616;
+  border: 2px solid #e81616;
+  margin: 30px auto 0;
+}
+.text-block .btn-round:hover {
+  background: #fff;
+  color: #e81616;
+}
+.opportunity .wrapper-inner {
+  padding: 0 15px;
+}
+.opportunity img {
+  width: auto;
+  position: relative;
+  left: calc(50% - 960px);
+}
+.pre-university p span {
+  font-weight: 600;
+}
+.pre-university ul {
+  width: 100%;
+  margin: 30px 0;
+}
+.pre-university ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.pre-university ul li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 200px;
+  float: left;
+  overflow: hidden;
+  margin: 2px 0;
+  padding: 0 70px;
+}
+.pre-university ul li:nth-child(1),
+.pre-university ul li:nth-child(5) {
+  width: 470px;
+}
+.pre-university ul li:nth-child(2),
+.pre-university ul li:nth-child(4) {
+  width: calc(100% - 474px);
+  float: right;
+}
+.pre-university ul li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+.pre-university ul li span {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 27px;
+}
+.pre-university h5 {
+  max-width: 960px;
+  color: #363636;
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 32px;
+  margin: 70px auto;
+  text-align: center;
+}
+.pre-university .why-we-list {
+  margin: 0;
+  float: none;
+}
+.text-block-headquartered .text-block-image {
+  width: 370px;
+}
+.text-block-headquartered .text-block-info {
+  width: calc(100% - 370px);
+  padding: 30px 60px 30px 30px;
+}
+.text-block-headquartered .btn-round {
+  margin: 30px 0 0;
 }

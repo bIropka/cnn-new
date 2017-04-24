@@ -12,6 +12,13 @@
   }
 
 }
+.smooth(@delay) {
+  -webkit-transition: @delay;
+  -moz-transition: @delay;
+  -ms-transition: @delay;
+  -o-transition: @delay;
+  transition: @delay;
+};
 
 * {
   padding: 0;
@@ -595,6 +602,26 @@ section {
 
   }
 
+}
+
+.btn-round {
+  display: block;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 25px 70px;
+  background: #f8a94e;
+  -webkit-border-radius: 25%;
+  -moz-border-radius: 25%;
+  border-radius: 45px;
+  margin: 0 auto;
+  max-width: 370px;
+  border: 2px solid #f8a94e;
+}
+.btn-round:hover {
+  background: #ffffff;
+  color: #f8a94e;
 }
 
 .right-side {
@@ -1970,13 +1997,46 @@ main {
 ******** why-ccn-top
 ***********************************************************************************************************************/
 
-.why-ccn-page h1,
 .why-ccn-page h4 {
   text-transform: uppercase;
+  margin: 30px 0;
+}
+
+.why-ccn-page h2 {
+  margin: 20px 0 40px;
+}
+
+.why-ccn-page h3 {
+  display: block;
+  width: 100%;
+  margin: 70px 0 50px;
 }
 
 .why-ccn-page {
   background: #f8f8fd;
+
+  img {
+    float: none;
+    margin: 0;
+    width: 100%;
+    max-width: none;
+  }
+
+  ul {
+    max-width: none;
+
+    li {
+      display: block;
+      margin: 0;
+      padding: 0;
+
+      &:before {
+        display: none;
+      }
+
+    }
+
+  }
 
   .why-we-list {
     float: left;
@@ -1988,6 +2048,7 @@ main {
   background: url(../images/why-ccn-background.png) no-repeat center top;
 
   h1 {
+    text-transform: uppercase;
     margin: 30px 0;
   }
 
@@ -2028,73 +2089,86 @@ main {
   background-size: 100%;
   padding: 40px 45px;
   float: right;
-}
-.ccn-news-inner {
-  width: 100%;
-  max-height: 100%;
-  overflow: hidden;
-}
-.ccn-news h2 {
-  font-size: 1.294117647058824em;
-  color: #a598ae;
-  text-transform: uppercase;
-  font-weight: 100;
-  font-style: normal;
-  line-height: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ccn-news .news-item {
-  margin-top: 25px;
-}
-.ccn-news .news-item .title {
-  color: #ceaed8;
-  font-weight: 100;
-  text-decoration: underline;
-  margin-bottom: 5px;
-  line-height: 1.2;
-  overflow: hidden;
-  height: 40px;
-}
-.ccn-news .news-item .title span {
-  color: #493e52;
-  font-weight: 600;
-  line-height: 1;
-}
-.ccn-news .news-item .icon-item {
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-  width: 15px;
-  height: 15px;
-  padding-left: 1px;
-  margin-right: 7px;
-  border: 1px solid #662c90;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  position: relative;
-}
-.ccn-news .news-item .fa {
-  display: inline-block;
-  line-height: 0;
-  color: #662c90;
-  font-size: 12px;
-  position: absolute;
-  margin: auto;
-  top: 7px;
-  right: 0;
-  left: 0;
-}
-.ccn-news .news-item a {
-  color: #662c90;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-.ccn-news .news-item a:hover {
-  text-decoration: underline;
+
+  .ccn-news-inner {
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  h2 {
+     font-size: 1.294117647058824em;
+     color: #a598ae;
+     text-transform: uppercase;
+     font-weight: 100;
+     font-style: normal;
+     line-height: 1;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+   }
+
+  .news-item {
+    margin-top: 25px;
+
+    .title {
+      color: #ceaed8;
+      font-weight: 100;
+      text-decoration: underline;
+      margin-bottom: 5px;
+      line-height: 1.2;
+      overflow: hidden;
+      height: 40px;
+
+      span {
+        color: #493e52;
+        font-weight: 600;
+        line-height: 1;
+      }
+
+    }
+
+    .icon-item {
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      width: 15px;
+      height: 15px;
+      padding-left: 1px;
+      margin-right: 7px;
+      border: 1px solid #662c90;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+      position: relative;
+    }
+
+    .fa {
+      display: inline-block;
+      line-height: 0;
+      color: #662c90;
+      font-size: 12px;
+      position: absolute;
+      margin: auto;
+      top: 7px;
+      right: 0;
+      left: 0;
+    }
+
+    a {
+      color: #662c90;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 300;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+    }
+
+  }
+
 }
 
 .why-we-list {
@@ -2111,6 +2185,8 @@ main {
     position: relative;
 
     &:after {
+      .smooth(.4s);
+
       content: '';
       display: block;
       position: absolute;
@@ -2151,6 +2227,303 @@ main {
 
     }
 
+    &:hover:after {
+      opacity: 0;
+    }
+
+  }
+
+}
+
+.universities-level h3 {
+  margin: 20px 0;
+}
+
+.custom-table {
+  display: table;
+  width: 100%;
+
+  .custom-table-row {
+    display: table-row;
+    background: #fff;
+
+    .custom-table-heading {
+      display: table-cell;
+      width: 33.3333%;
+      color: #e3dff3;
+      font-size: 17px;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 30px 100px 30px 50px;
+    }
+
+    .custom-table-cell {
+      display: table-cell;
+      width: 33.3333%;
+      padding: 20px 40px 15px 50px;
+      color: #313131;
+      font-size: 17px;
+      font-weight: 300;
+
+      &:first-of-type {
+        color: #313131;
+        text-align: right;
+        font-size: 17px;
+        font-weight: 500;
+      }
+
+    }
+
+    &:nth-of-type(2n + 1) {
+      background: #ebf0f3;
+    }
+
+    &:first-of-type {
+      background: #857caf;
+    }
+
+  }
+
+}
+
+.university-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: #fff;
+  margin: 3px 0;
+  padding: 25px;
+
+  span {
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 3px 0;
+    color: #662c90;
+
+    &:last-of-type {
+      margin: 3px 0 15px 0;
+    }
+
+  }
+
+  .fa {
+    font-size: 20px;
+    color: #f8a94e;
+    margin: 0 10px 0 0;
+  }
+
+  ul {
+    margin: 10px 0;
+
+    li {
+      display: block;
+      margin: 5px 0;
+      padding: 0;
+
+      &:before {
+        display: none;
+      }
+
+    }
+
+  }
+
+  .university-item-image {
+    width: 133px;
+
+    img {
+      display: block;
+      margin: 0;
+      width: 100%;
+      height: auto;
+    }
+
+  }
+
+  .university-item-main {
+
+    span:nth-of-type(2) {
+      color: #f8a94e;
+    }
+
+    span:nth-of-type(3) {
+      color: #313131;
+      font-weight: 300;
+    }
+
+  }
+
+  .university-rate-china {
+
+  }
+
+  .university-rate-world {
+
+  }
+
+}
+
+.why-ccn-universities .btn-round {
+  margin: 65px auto 0;
+}
+
+.text-block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  .text-block-image {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      display: block;
+      margin: 0;
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+  }
+
+  .text-block-info {
+    width: 50%;
+    background: #fff;
+    padding: 40px 90px 40px 50px;
+    color: #363636;
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 300;
+
+    span {
+      font-weight: 500;
+    }
+
+  }
+
+  .btn-round {
+    text-align: center;
+    background: #e81616;
+    border: 2px solid #e81616;
+    margin: 30px auto 0;
+
+    &:hover {
+      background: #fff;
+      color: #e81616;
+    }
+
+  }
+
+}
+
+.opportunity {
+
+  .wrapper-inner {
+    padding: 0 15px;
+  }
+
+  img {
+    width: auto;
+    position: relative;
+    left: ~"calc(50% - 960px)";
+  }
+
+}
+
+.pre-university {
+
+  p span {
+    font-weight: 600;
+  }
+
+  ul {
+    .clearfix();
+
+    width: 100%;
+    margin: 30px 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      position: relative;
+      height: 200px;
+      float: left;
+      overflow: hidden;
+      margin: 2px 0;
+      padding: 0 70px;
+
+      &:nth-child(1),
+      &:nth-child(5) {
+        width: 470px;
+      }
+
+      &:nth-child(2),
+      &:nth-child(4) {
+        width: ~"calc(100% - 474px)";
+        float: right;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        min-height: 100%;
+      }
+
+      span {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 27px;
+      }
+
+    }
+
+  }
+
+  h5 {
+    max-width: 960px;
+    color: #363636;
+    font-size: 22px;
+    font-weight: 100;
+    line-height: 32px;
+    margin: 70px auto;
+    text-align: center;
+  }
+
+  .why-we-list {
+    margin: 0;
+    float: none;
+  }
+
+}
+
+.career-service {
+
+}
+
+.text-block-headquartered {
+
+  .text-block-image {
+    width: 370px;
+  }
+
+  .text-block-info {
+    width: ~"calc(100% - 370px)";
+    padding: 30px 60px 30px 30px;
+  }
+
+  .btn-round {
+    margin: 30px 0 0;
   }
 
 }
