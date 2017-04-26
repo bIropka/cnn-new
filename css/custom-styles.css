@@ -2078,6 +2078,66 @@ main p {
   margin: 0;
   float: none;
 }
+.career-service ul {
+  margin-bottom: 35px;
+}
+.career-service ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  margin: 4px 0;
+  padding: 30px 50px;
+}
+.career-service ul li .icon {
+  width: 109px;
+}
+.career-service ul li .text {
+  width: calc(100% - 160px);
+  color: #363636;
+  font-size: 17px;
+  line-height: 27px;
+  font-weight: 300;
+}
+.career-service ul li .text span {
+  font-weight: 500;
+  font-size: inherit;
+}
+.career-service .more {
+  background: url(../images/image-more.png) no-repeat center;
+  background-size: cover;
+  text-align: center;
+  padding: 45px;
+}
+.career-service .more span {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.career-service .more a {
+  display: inline-block;
+  width: 147px;
+  line-height: 1;
+  border-radius: 17px;
+  background: #f8a94e;
+  padding: 5px 0 7px;
+  border: none;
+}
+.career-service .more a .fa {
+  color: inherit;
+  font-size: 20px;
+  line-height: 1;
+  position: relative;
+  margin-left: 5px;
+  top: 2px;
+}
+.career-service .more a:hover {
+  background: #fff;
+  color: #f8a94e;
+}
 .text-block-headquartered .text-block-image {
   width: 370px;
 }
@@ -2087,4 +2147,148 @@ main p {
 }
 .text-block-headquartered .btn-round {
   margin: 30px 0 0;
+}
+.reviews ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 20px 0 40px;
+  position: relative;
+}
+.reviews ul li {
+  display: block;
+  width: 370px;
+  position: relative;
+  background: #fff url(../images/decor-whyccn-students.png) no-repeat right bottom;
+  padding-bottom: 25px;
+}
+.reviews ul li .review-image {
+  display: block;
+  width: 370px;
+  height: 210px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+.reviews ul li .review-image img {
+  display: block;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.reviews ul li .marker {
+  display: block;
+  width: 94px;
+  height: 66px;
+  background: url(../images/YouTube-icon-full_color.png);
+  background-size: cover;
+  position: absolute;
+  right: 30px;
+  top: 115px;
+  z-index: 11;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  cursor: pointer;
+}
+@media (max-width: 540px) {
+  .reviews ul li .marker {
+    top: 130px;
+  }
+}
+.reviews ul li .review-text {
+  margin: 25px 25px 5px 25px;
+  text-transform: uppercase;
+  color: #662c90;
+  font-size: 18px;
+  font-weight: 900;
+  font-style: italic;
+}
+.reviews ul li .reviewer {
+  margin: 0 25px;
+}
+.reviews ul li .reviewer-name,
+.reviews ul li .reviewer-course {
+  color: #363636;
+  font-size: 15px;
+  font-weight: 300;
+}
+.reviews ul li:hover .review-image {
+  -webkit-box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.7);
+  box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.7);
+}
+.reviews ul li:hover .marker {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+@media (max-width: 1200px) {
+  .reviews ul {
+    justify-content: center;
+  }
+  .reviews ul li {
+    margin: 15px;
+  }
+}
+@media (max-width: 540px) {
+  .reviews ul li {
+    width: 300px;
+    margin: 15px 0;
+  }
+  .reviews ul li .review-image {
+    width: 300px;
+    height: 200px;
+    margin: 0 0 20px 0;
+  }
+}
+.whu-ccn-programs {
+  background: url(../images/background-8.jpg) no-repeat center top;
+  background-size: cover;
+  padding: 60px 0;
+}
+.whu-ccn-programs a {
+  display: block;
+  width: 375px;
+  height: 90px;
+  line-height: 88px;
+  font-weight: 900;
+  font-size: 1.9em;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-style: italic;
+  text-align: center;
+  -webkit-border-radius: 25%;
+  -moz-border-radius: 25%;
+  border-radius: 3em;
+  margin: 0 auto;
+  background: #ef1013;
+  -webkit-box-shadow: inset 0 -4px 0 0 #a60909;
+  -moz-box-shadow: inset 0 -4px 0 0 #a60909;
+  box-shadow: inset 0 -4px 0 0 #a60909;
+}
+.whu-ccn-programs a:hover {
+  color: #ffffff;
+  background: rgba(166, 9, 9, 0.9);
+}
+.whu-ccn-programs a:active {
+  background: #a60909;
+}
+@media (max-width: 768px) {
+  .whu-ccn-programs a {
+    display: none;
+  }
 }
