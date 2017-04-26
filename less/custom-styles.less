@@ -617,6 +617,7 @@ section {
   border-radius: 45px;
   margin: 0 auto;
   max-width: 370px;
+  text-align: center;
   border: 2px solid #f8a94e;
 }
 .btn-round:hover {
@@ -2010,6 +2011,11 @@ main {
   display: block;
   width: 100%;
   margin: 70px 0 50px;
+
+  @media(max-width: 640px) {
+    margin: 40px 0 30px;
+  }
+
 }
 
 .why-ccn-page {
@@ -2052,11 +2058,21 @@ main {
     margin: 30px 0;
   }
 
+  @media(max-width: 1200px) {
+    background: none;
+  }
+
 }
 
 .why-ccn-info {
   width: ~"calc(100% - 430px)";
   float: left;
+
+  @media(max-width: 1200px) {
+    width: 100%;
+    float: none;
+  }
+
 }
 
 .ccn-mission {
@@ -2078,6 +2094,26 @@ main {
     font-size: 17px;
     font-weight: 300;
     line-height: 27px;
+  }
+
+  @media(max-width: 1200px) {
+    width: 100%;
+    float: none;
+    margin-top: 75%;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 70.38759689922481%;
+      background: url(../images/why-ccn-background-small.png) no-repeat center;
+      background-size: contain;
+      position: absolute;
+      left: -50px;
+      right: -50px;
+      bottom: 100%;
+    }
+
   }
 
 }
@@ -2169,6 +2205,10 @@ main {
 
   }
 
+  @media(max-width: 1200px) {
+    display: none;
+  }
+
 }
 
 .why-we-list {
@@ -2233,6 +2273,26 @@ main {
 
   }
 
+  @media(max-width: 1230px) {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+      margin: 20px;
+    }
+
+  }
+
+  @media(max-width: 768px) {
+
+    a {
+      width: 100%;
+      max-width: 369px;
+      margin: 20px 0;
+    }
+
+  }
+
 }
 
 .universities-level h3 {
@@ -2280,6 +2340,67 @@ main {
 
     &:first-of-type {
       background: #857caf;
+    }
+
+  }
+
+  @media(max-width: 980px) {
+    display: block;
+
+    .custom-table-row {
+      display: block;
+      .clearfix();
+
+      &:nth-of-type(2n + 1) {
+        background: #fff;
+      }
+
+      &:first-of-type {
+        background: #857caf;
+      }
+
+      .custom-table-heading {
+        width: 50%;
+
+        &:first-of-type {
+          display: none;
+        }
+
+      }
+
+      .custom-table-cell {
+        display: block;
+        width: 50%;
+        float: left;
+        text-align: left;
+
+        &:first-of-type {
+          display: block;
+          width: 100%;
+          background: #ebf0f3;
+          text-align: left;
+        }
+
+
+      }
+
+    }
+
+  }
+
+  @media(max-width: 640px) {
+
+    .custom-table-row {
+
+      .custom-table-heading {
+        padding: 15px;
+        font-size: 15px;
+      }
+
+      .custom-table-cell {
+        padding: 15px;
+      }
+
     }
 
   }
@@ -2354,11 +2475,34 @@ main {
 
   }
 
-  .university-rate-china {
+  @media(max-width: 1200px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .university-item-image {
+      width: 74px;
+      margin: 10px 0;
+    }
+
+    .university-item-main {
+      width: ~"calc(100% - 120px)";
+      margin: 10px 0;
+    }
+
+    .university-rate-china,
+    .university-rate-world {
+      width: 100%;
+      margin: 10px 0;
+    }
 
   }
 
-  .university-rate-world {
+  @media(max-width: 480px) {
+    padding: 10px;
+
+    .university-item-main {
+      width: ~"calc(100% - 90px)";
+    }
 
   }
 
@@ -2366,6 +2510,11 @@ main {
 
 .why-ccn-universities .btn-round {
   margin: 65px auto 0;
+
+  @media(max-width: 480px) {
+    padding: 15px 30px;
+  }
+
 }
 
 .text-block {
@@ -2418,6 +2567,42 @@ main {
 
   }
 
+  @media(max-width: 980px) {
+    display: block;
+
+    .text-block-image {
+      display: inline-block;
+      width: auto;
+      max-width: 100%;
+
+      img {
+        max-width: 100%;
+        min-width: 0;
+        min-height: 0;
+      }
+
+    }
+
+    .text-block-info {
+      width: 100%;
+      text-align: left;
+      padding: 20px 40px;
+    }
+
+    .btn-round {
+      margin: 20px 0 0 0;
+    }
+
+  }
+
+  @media(max-width: 640px) {
+
+    .text-block-info {
+      padding: 20px;
+    }
+
+  }
+
 }
 
 .opportunity {
@@ -2426,10 +2611,28 @@ main {
     padding: 0 15px;
   }
 
-  img {
+  > img:first-of-type {
     width: auto;
     position: relative;
     left: ~"calc(50% - 960px)";
+    margin-bottom: 40px;
+
+    @media(max-width: 768px) {
+      display: none;
+    }
+
+  }
+
+  > img:nth-of-type(2) {
+    display: none;
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+
+    @media(max-width: 768px) {
+      display: block;
+    }
+
   }
 
 }
@@ -2486,6 +2689,35 @@ main {
         line-height: 27px;
       }
 
+      @media(max-width: 1230px) {
+        width: 100%;
+        height: auto;
+        padding: 40px;
+        float: none;
+
+        img {
+          display: none;
+        }
+
+        &:nth-child(1),
+        &:nth-child(5) {
+          width: 100%;
+        }
+
+        &:nth-child(2),
+        &:nth-child(4) {
+          width: 100%;
+          float: none;
+        }
+
+        &:nth-child(1) {background: #b44985;}
+        &:nth-child(2) {background: #c38549;}
+        &:nth-child(3) {background: #8d65aa;}
+        &:nth-child(4) {background: #6570aa;}
+        &:nth-child(5) {background: #5e7b93;}
+
+      }
+
     }
 
   }
@@ -2538,6 +2770,18 @@ main {
 
       }
 
+      @media(max-width: 640px) {
+        flex-wrap: wrap;
+        margin: 25px 0;
+        padding: 25px;
+
+        .text {
+          width: 100%;
+          margin: 20px 0 0 0;
+        }
+
+      }
+
     }
 
   }
@@ -2559,19 +2803,23 @@ main {
 
     a {
       display: inline-block;
-      width: 147px;
-      line-height: 1;
+      width: 150px;
+      height: 40px;
+      line-height: 40px;
       border-radius: 17px;
       background: #f8a94e;
-      padding: 5px 0 7px;
       border: none;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-style: italic;
+      padding: 0;
 
       .fa {
         color: inherit;
-        font-size: 20px;
+        font-size: 22px;
         line-height: 1;
         position: relative;
-        margin-left: 5px;
+        margin-left: 8px;
         top: 2px;
       }
 
@@ -2599,6 +2847,42 @@ main {
 
   .btn-round {
     margin: 30px 0 0;
+  }
+
+  @media(max-width: 980px) {
+    display: block;
+
+    .text-block-image {
+      display: inline-block;
+      width: auto;
+      max-width: 100%;
+
+      img {
+        max-width: 100%;
+        min-width: 0;
+        min-height: 0;
+      }
+
+    }
+
+    .text-block-info {
+      width: 100%;
+      text-align: left;
+      padding: 20px 40px;
+    }
+
+    .btn-round {
+      margin: 20px 0 0 0;
+    }
+
+  }
+
+  @media(max-width: 640px) {
+
+    .text-block-info {
+      padding: 20px;
+    }
+
   }
 
 }
@@ -2661,11 +2945,6 @@ main {
         -o-transition: .4s;
         transition: .4s;
         cursor: pointer;
-
-        @media (max-width: 540px) {
-          top: 130px;
-        }
-
       }
 
       .review-text {
