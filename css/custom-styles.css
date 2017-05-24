@@ -2579,6 +2579,24 @@ main p {
   margin: 0;
   padding: 15px 0;
 }
+@media (max-width: 980px) {
+  .ifp-list {
+    display: block;
+  }
+  .ifp-list .ifp-list-item {
+    width: 100%;
+    max-width: 300px;
+    margin: 50px auto;
+  }
+}
+@media (max-width: 480px) {
+  .ifp-list ul li {
+    padding: 0 0 0 40px;
+  }
+  .ifp-list ul li:before {
+    left: 15px;
+  }
+}
 .ifp-order {
   background: url(../images/background-8.jpg) no-repeat center top;
   background-size: cover;
@@ -2616,9 +2634,10 @@ main p {
 .ifp-order a:active {
   background: #a60909;
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .ifp-order a {
-    display: none;
+    width: 90%;
+    font-size: 16px;
   }
 }
 .ifp-important-info {
@@ -2629,6 +2648,15 @@ main p {
 .ifp-important-info .ifp-skills-info {
   padding: 35px;
   border-right: none;
+}
+@media (max-width: 1080px) {
+  .ifp-important-info .ifp-skills-info {
+    text-align: center;
+  }
+  .ifp-important-info .ifp-skills-info img {
+    max-width: 100%;
+    margin: auto;
+  }
 }
 .ifp-important-info h2 {
   font-weight: 300;
@@ -2641,11 +2669,21 @@ main p {
   font-weight: 300;
   font-style: normal;
 }
+@media (max-width: 768px) {
+  .ifp-important-info h2 {
+    font-size: 24px;
+  }
+}
 .ifp-important-info > img {
   height: calc(100% + 2px);
   position: absolute;
   top: -1px;
   right: 0;
+}
+@media (max-width: 1080px) {
+  .ifp-important-info > img {
+    display: none;
+  }
 }
 .ifp-features {
   margin: 50px 0;
@@ -2771,6 +2809,202 @@ main p {
 .ifp-courses-diagram {
   margin: 50px 0;
 }
+.ifp-courses-diagram .courses-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 670px;
+  margin: 30px 0 60px;
+}
+@media (max-width: 980px) {
+  .ifp-courses-diagram .courses-list {
+    width: 100%;
+  }
+}
+.ifp-courses-diagram .courses-list-header {
+  background: #d9d9d9;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  height: 50px;
+}
+.ifp-courses-diagram .courses-list-header:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 40px solid #d9d9d9;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  position: absolute;
+  top: -13px;
+  right: -40px;
+}
+.ifp-courses-diagram .courses-list-header .course-name {
+  font-size: inherit;
+  font-weight: inherit;
+}
+.ifp-courses-diagram .courses-list-header .course-duration {
+  font-size: inherit;
+  font-weight: inherit;
+}
+.ifp-courses-diagram .courses-list-header .course-type {
+  font-size: inherit;
+  font-weight: inherit;
+  position: absolute;
+  right: 25px;
+  top: 0;
+  line-height: 50px;
+}
+.ifp-courses-diagram .courses-list-header .course-degree {
+  font-size: inherit;
+  font-weight: inherit;
+  position: absolute;
+  left: calc(100% + 60px);
+  top: 0;
+  line-height: 50px;
+}
+@media (max-width: 980px) {
+  .ifp-courses-diagram .courses-list-header {
+    height: auto;
+    padding: 15px 20px;
+  }
+  .ifp-courses-diagram .courses-list-header:after {
+    display: none;
+  }
+  .ifp-courses-diagram .courses-list-header .course-degree,
+  .ifp-courses-diagram .courses-list-header .course-type {
+    position: static;
+    line-height: 1.2;
+  }
+}
+.ifp-courses-diagram .course-disciplines {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  min-height: 80px;
+}
+@media (max-width: 980px) {
+  .ifp-courses-diagram .course-disciplines {
+    flex-wrap: wrap;
+  }
+}
+.ifp-courses-diagram .course-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #fff;
+  padding: 20px 10px;
+  text-align: center;
+}
+.ifp-courses-diagram .course-item:nth-of-type(1) {
+  background: #7030a0;
+}
+.ifp-courses-diagram .course-item:nth-of-type(2) {
+  background: #bfbfbf;
+}
+.ifp-courses-diagram .course-item:nth-of-type(3) {
+  background: #ffc000;
+}
+@media (max-width: 980px) {
+  .ifp-courses-diagram .course-item {
+    justify-content: flex-start;
+    padding: 15px 20px;
+  }
+}
+.ifp-courses-diagram .course-a {
+  width: 100%;
+}
+.ifp-courses-diagram .course-a .course-item:nth-of-type(1) {
+  width: 45%;
+}
+.ifp-courses-diagram .course-a .course-item:nth-of-type(2) {
+  width: 25%;
+}
+.ifp-courses-diagram .course-a .course-item:nth-of-type(3) {
+  width: 30%;
+}
+@media (max-width: 980px) {
+  .ifp-courses-diagram .course-a {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .ifp-courses-diagram .course-a .course-item:nth-of-type(1),
+  .ifp-courses-diagram .course-a .course-item:nth-of-type(2),
+  .ifp-courses-diagram .course-a .course-item:nth-of-type(3) {
+    width: 100%;
+  }
+}
+.ifp-courses-diagram .course-b {
+  width: 75%;
+}
+.ifp-courses-diagram .course-b .course-item:nth-of-type(1) {
+  width: 50%;
+}
+.ifp-courses-diagram .course-b .course-item:nth-of-type(2) {
+  width: 30%;
+}
+.ifp-courses-diagram .course-b .course-item:nth-of-type(3) {
+  width: 20%;
+}
+@media (max-width: 980px) {
+  .ifp-courses-diagram .course-b {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .ifp-courses-diagram .course-b .course-item:nth-of-type(1),
+  .ifp-courses-diagram .course-b .course-item:nth-of-type(2),
+  .ifp-courses-diagram .course-b .course-item:nth-of-type(3) {
+    width: 100%;
+  }
+}
+.ifp-courses-diagram .course-c {
+  width: 60%;
+}
+.ifp-courses-diagram .course-c .course-item:nth-of-type(1) {
+  width: 65%;
+}
+.ifp-courses-diagram .course-c .course-item:nth-of-type(2) {
+  width: 35%;
+}
+@media (max-width: 980px) {
+  .ifp-courses-diagram .course-c {
+    width: 100%;
+  }
+  .ifp-courses-diagram .course-c .course-item:nth-of-type(1),
+  .ifp-courses-diagram .course-c .course-item:nth-of-type(2),
+  .ifp-courses-diagram .course-c .course-item:nth-of-type(3) {
+    width: 100%;
+  }
+}
+.ifp-courses-diagram .courses-list.humanities .course-item:nth-of-type(1) {
+  background: #7030a0;
+}
+.ifp-courses-diagram .courses-list.humanities .course-item:nth-of-type(2) {
+  background: #ffc000;
+}
+.ifp-courses-diagram .courses-list.humanities .course-a .course-item:nth-of-type(1) {
+  width: 70%;
+}
+.ifp-courses-diagram .courses-list.humanities .course-a .course-item:nth-of-type(2) {
+  width: 30%;
+}
+@media (max-width: 980px) {
+  .ifp-courses-diagram .courses-list.humanities .course-a .course-item:nth-of-type(1),
+  .ifp-courses-diagram .courses-list.humanities .course-a .course-item:nth-of-type(2) {
+    width: 100%;
+  }
+}
+.ifp-courses-diagram .courses-list.humanities .course-b .course-item:nth-of-type(1) {
+  width: 100%;
+}
+.ifp-courses-diagram .courses-list.humanities .course-c .course-item:nth-of-type(1) {
+  width: 100%;
+}
 .ifp-courses-table {
   margin: 50px 0;
 }
@@ -2871,11 +3105,26 @@ main p {
 .ifp-evaluation-criteria .result-rate .note span:after {
   left: 80px;
 }
+@media (max-width: 1170px) {
+  .ifp-evaluation-criteria .result-rate .note {
+    position: static;
+  }
+}
+@media (max-width: 768px) {
+  .ifp-evaluation-criteria .result-rate .note {
+    width: 100%;
+  }
+}
 .ifp-evaluation-criteria .all-criteria {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   border: 1px solid #f0f0f5;
+}
+@media (max-width: 768px) {
+  .ifp-evaluation-criteria .all-criteria {
+    display: block;
+  }
 }
 .ifp-evaluation-criteria .all-criteria h4 {
   display: block;
@@ -2890,10 +3139,16 @@ main p {
 .ifp-evaluation-criteria .all-criteria > div:last-child {
   border-right: none;
 }
+@media (max-width: 768px) {
+  .ifp-evaluation-criteria .all-criteria > div {
+    width: 100%;
+    border-bottom: 1px solid #f0f0f5;
+  }
+}
 .ifp-evaluation-criteria .image-text-left,
 .ifp-evaluation-criteria .image-text-right {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: stretch;
 }
 .ifp-evaluation-criteria .image-text-left img,
@@ -2903,6 +3158,7 @@ main p {
 .ifp-evaluation-criteria .image-text-left .text,
 .ifp-evaluation-criteria .image-text-right .text {
   display: flex;
+  width: 50%;
   align-items: center;
   flex-wrap: wrap;
   align-content: center;
@@ -2911,6 +3167,27 @@ main p {
 .ifp-evaluation-criteria .image-text-left .text span,
 .ifp-evaluation-criteria .image-text-right .text span {
   font-weight: 500;
+}
+@media (max-width: 768px) {
+  .ifp-evaluation-criteria .image-text-left .text,
+  .ifp-evaluation-criteria .image-text-right .text {
+    display: block;
+    padding: 20px;
+  }
+}
+@media (max-width: 1170px) {
+  .ifp-evaluation-criteria .image-text-left,
+  .ifp-evaluation-criteria .image-text-right {
+    display: block;
+  }
+  .ifp-evaluation-criteria .image-text-left img,
+  .ifp-evaluation-criteria .image-text-right img {
+    width: 100%;
+  }
+  .ifp-evaluation-criteria .image-text-left .text,
+  .ifp-evaluation-criteria .image-text-right .text {
+    width: 100%;
+  }
 }
 .ifp-evaluation-criteria .image-text-left .text {
   border-right: 1px solid #f0f0f5;
