@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+
+    $('.custom-table-4x .show-more span').click(function() {
+
+        $(this).parent().toggleClass('active');
+
+    });
+
     if ($(window).width() < '1171'){
 
         $('.sign-block').appendTo('nav');

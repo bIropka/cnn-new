@@ -2407,6 +2407,70 @@ main {
 
 }
 
+.custom-table-4x {
+  display: table;
+  width: 100%;
+  min-width: 980px;
+  border: 1px solid #cdd5da;
+
+  .custom-table-row {
+    display: table-row;
+    background: #fff;
+
+    .custom-table-heading {
+      display: table-cell;
+      color: #e3dff3;
+      font-size: 17px;
+      font-weight: 500;
+      text-transform: uppercase;
+      width: 22%;
+      text-align: center;
+      padding: 15px 25px;
+      vertical-align: middle;
+      border-right: 1px solid #cdd5da;
+
+      &:nth-of-type(4) {
+        width: 36%;
+        border-right: none;
+      }
+
+    }
+
+    .custom-table-cell {
+      display: table-cell;
+      color: #313131;
+      font-size: 17px;
+      font-weight: 300;
+      width: 22%;
+      padding: 15px 25px;
+      border-right: 1px solid #cdd5da;
+
+      &:first-of-type {
+        color: #313131;
+        text-align: left;
+        font-size: 17px;
+        font-weight: 500;
+      }
+
+      &:nth-of-type(4) {
+        width: 30%;
+        border-right: none;
+      }
+
+    }
+
+    &:nth-of-type(2n + 1) {
+      background: #ebf0f3;
+    }
+
+    &:first-of-type {
+      background: #857caf;
+    }
+
+  }
+
+}
+
 .university-item {
   display: flex;
   justify-content: space-around;
@@ -3260,6 +3324,7 @@ main {
 
 .ifp-variants {
   margin: 50px 0;
+  overflow: auto;
 
   h2 {
     margin-bottom: 30px;
@@ -3271,17 +3336,57 @@ main {
 
   }
 
-  .custom-table {
+  .hidden {
+    display: none;
+    font-size: inherit;
+    color: inherit;
+    font-family: inherit;
+  }
 
-    .custom-table-row {
+  .show-more {
+    font-size: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-weight:inherit;
 
-      .custom-table-heading {
-        padding: 15px 100px 15px 50px;
-        vertical-align: middle;
+    span {
+      display: block;
+      font-size: inherit;
+      color: inherit;
+      font-family: inherit;
+      font-weight:inherit;
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:last-of-type {
+        display: none;
       }
 
     }
 
+    &.active {
+
+      span {
+
+        &:first-of-type {
+          display: none;
+        }
+
+        &:last-of-type {
+          display: block;}
+
+      }
+
+    }
+
+  }
+
+  .show-more.active + .hidden {
+    display: block!important;
   }
 
 }
@@ -3334,79 +3439,6 @@ main {
 .ifp-programs {
   margin: 50px 0;
   overflow: auto;
-
-  .custom-table-4x {
-    display: table;
-    width: 100%;
-    min-width: 980px;
-    border: 1px solid #cdd5da;
-
-    .custom-table-row {
-      display: table-row;
-      background: #fff;
-
-      .custom-table-heading {
-        display: table-cell;
-        color: #e3dff3;
-        font-size: 17px;
-        font-weight: 500;
-        text-transform: uppercase;
-        width: 20%;
-        text-align: center;
-        padding: 15px 25px;
-        vertical-align: middle;
-        border-right: 1px solid #cdd5da;
-
-        &:nth-of-type(2),
-        &:nth-of-type(4) {
-          width: 30%;
-        }
-
-        &:nth-of-type(4) {
-          border-right: none;
-        }
-
-      }
-
-      .custom-table-cell {
-        display: table-cell;
-        color: #313131;
-        font-size: 17px;
-        font-weight: 300;
-        width: 25%;
-        padding: 15px 25px;
-        border-right: 1px solid #cdd5da;
-
-        &:first-of-type {
-          color: #313131;
-          text-align: left;
-          font-size: 17px;
-          font-weight: 500;
-        }
-
-        &:nth-of-type(2),
-        &:nth-of-type(4) {
-          width: 30%;
-        }
-
-        &:nth-of-type(4) {
-          border-right: none;
-        }
-
-      }
-
-      &:nth-of-type(2n + 1) {
-        background: #ebf0f3;
-      }
-
-      &:first-of-type {
-        background: #857caf;
-      }
-
-    }
-
-  }
-
 }
 
 .ifp-courses-diagram {

@@ -2018,6 +2018,57 @@ main p {
     padding: 15px;
   }
 }
+.custom-table-4x {
+  display: table;
+  width: 100%;
+  min-width: 980px;
+  border: 1px solid #cdd5da;
+}
+.custom-table-4x .custom-table-row {
+  display: table-row;
+  background: #fff;
+}
+.custom-table-4x .custom-table-row .custom-table-heading {
+  display: table-cell;
+  color: #e3dff3;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 22%;
+  text-align: center;
+  padding: 15px 25px;
+  vertical-align: middle;
+  border-right: 1px solid #cdd5da;
+}
+.custom-table-4x .custom-table-row .custom-table-heading:nth-of-type(4) {
+  width: 36%;
+  border-right: none;
+}
+.custom-table-4x .custom-table-row .custom-table-cell {
+  display: table-cell;
+  color: #313131;
+  font-size: 17px;
+  font-weight: 300;
+  width: 22%;
+  padding: 15px 25px;
+  border-right: 1px solid #cdd5da;
+}
+.custom-table-4x .custom-table-row .custom-table-cell:first-of-type {
+  color: #313131;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 500;
+}
+.custom-table-4x .custom-table-row .custom-table-cell:nth-of-type(4) {
+  width: 30%;
+  border-right: none;
+}
+.custom-table-4x .custom-table-row:nth-of-type(2n + 1) {
+  background: #ebf0f3;
+}
+.custom-table-4x .custom-table-row:first-of-type {
+  background: #857caf;
+}
 .university-item {
   display: flex;
   justify-content: space-around;
@@ -2704,6 +2755,7 @@ main p {
 }
 .ifp-variants {
   margin: 50px 0;
+  overflow: auto;
 }
 .ifp-variants h2 {
   margin-bottom: 30px;
@@ -2712,9 +2764,41 @@ main p {
   display: block;
   font-weight: 500;
 }
-.ifp-variants .custom-table .custom-table-row .custom-table-heading {
-  padding: 15px 100px 15px 50px;
-  vertical-align: middle;
+.ifp-variants .hidden {
+  display: none;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+.ifp-variants .show-more {
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+.ifp-variants .show-more span {
+  display: block;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.ifp-variants .show-more span:hover {
+  text-decoration: underline;
+}
+.ifp-variants .show-more span:last-of-type {
+  display: none;
+}
+.ifp-variants .show-more.active span:first-of-type {
+  display: none;
+}
+.ifp-variants .show-more.active span:last-of-type {
+  display: block;
+}
+.ifp-variants .show-more.active + .hidden {
+  display: block!important;
 }
 .ifp-directions {
   margin: 50px 0;
@@ -2748,63 +2832,6 @@ main p {
 .ifp-programs {
   margin: 50px 0;
   overflow: auto;
-}
-.ifp-programs .custom-table-4x {
-  display: table;
-  width: 100%;
-  min-width: 980px;
-  border: 1px solid #cdd5da;
-}
-.ifp-programs .custom-table-4x .custom-table-row {
-  display: table-row;
-  background: #fff;
-}
-.ifp-programs .custom-table-4x .custom-table-row .custom-table-heading {
-  display: table-cell;
-  color: #e3dff3;
-  font-size: 17px;
-  font-weight: 500;
-  text-transform: uppercase;
-  width: 20%;
-  text-align: center;
-  padding: 15px 25px;
-  vertical-align: middle;
-  border-right: 1px solid #cdd5da;
-}
-.ifp-programs .custom-table-4x .custom-table-row .custom-table-heading:nth-of-type(2),
-.ifp-programs .custom-table-4x .custom-table-row .custom-table-heading:nth-of-type(4) {
-  width: 30%;
-}
-.ifp-programs .custom-table-4x .custom-table-row .custom-table-heading:nth-of-type(4) {
-  border-right: none;
-}
-.ifp-programs .custom-table-4x .custom-table-row .custom-table-cell {
-  display: table-cell;
-  color: #313131;
-  font-size: 17px;
-  font-weight: 300;
-  width: 25%;
-  padding: 15px 25px;
-  border-right: 1px solid #cdd5da;
-}
-.ifp-programs .custom-table-4x .custom-table-row .custom-table-cell:first-of-type {
-  color: #313131;
-  text-align: left;
-  font-size: 17px;
-  font-weight: 500;
-}
-.ifp-programs .custom-table-4x .custom-table-row .custom-table-cell:nth-of-type(2),
-.ifp-programs .custom-table-4x .custom-table-row .custom-table-cell:nth-of-type(4) {
-  width: 30%;
-}
-.ifp-programs .custom-table-4x .custom-table-row .custom-table-cell:nth-of-type(4) {
-  border-right: none;
-}
-.ifp-programs .custom-table-4x .custom-table-row:nth-of-type(2n + 1) {
-  background: #ebf0f3;
-}
-.ifp-programs .custom-table-4x .custom-table-row:first-of-type {
-  background: #857caf;
 }
 .ifp-courses-diagram {
   margin: 50px 0;
